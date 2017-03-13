@@ -1,2 +1,6 @@
 # batchOE
-Batch Operating Enviroment. I intend it to have an API and be usable. IF YOU WANT TO WORK ON IT, IT REQUIRES ADVANCED BAT-EXE CONVERTER!
+Batch Operating Enviroment. I intend it to have an API and be usable. 
+
+Works on Windows NT (at least XP+)
+
+You can use the included batchoe.exe file, but it will only be updated each release.
