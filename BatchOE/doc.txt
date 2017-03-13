@@ -1,0 +1,37 @@
+when app exited...
+- redraw main screen over where the app was.
+Apps are custom EXE files, with the app drawing capabilties builtin.
+When an application is selected, call the EXE file.
+- supply headers for tools to use, e.g:
+AddText() - draws text on portion of screen, e.g
+AddText 5 5 
+- will add text at 5, 5
+- color = 8, 15 [load_bootscreen]
+set pos001=18
+set pos002=23
+e.g headerfile:
+aliases="renfile"
+-createPen() - adds a interface for typing, Locate 30 30. 
+[MAKE TYPING AREA]
+locate 12 12
+set /p %typingarea%=
+note - FIGURE OUT HOW TO MAKE A BATCH FILE READ ARGUMENTS GIVEN TO IT!!!
+[Ideas for API]
+API Alpha
+addtext(fgcolor, bgcolor, x, y) Draws on portion of screen, from 0,0 to 80,25, with fg/bgcolor. If e.g %%a > 80, %%b > 25 says "Error: Too big, has to be <80, <25" Implements the BAT-EXE PrintColorAt.
+addtextreturn(fgcolor, bgcolor, x, y) same as addtext but it adds a return afterwards.
+deletefile(filename) Deletes a file. Implements the Win32 console del command.
+renamefile(filename) Renames a file. Implements the Win32 console ren/rename command.
+openfile(filename) Opens a file. Implements the Win32 console execution commands.
+addtofile(text, filename) Adds data to a file. Implements the Win32 console >> argument.
+overwritefile(text, filename) Overwrites a file with data. Implements the Win32 console > argument.
+copyfile(pathfile01, pathfile02) Copies a file to another area. Implements the Win32 console copy command.
+movefile(pathold, pathnew) Moves a file to another area. Implements the Win32 console move command.
+createtypingarea(x,y) - Creates an area to type in. Uses the bat-exe "locate" command, but does not implement anything from that or Win32.
+createcmd() - Creates a Win32 console session. Implements the "start" command (may change) from the Win32 console.
+createfile(filename, type) - Creates a file of type type and filename filename.
+savefile(filename, type) -  Meant for word processors, notepad applications, the sort. Saves file with content %typingarea%. May change to be dynamic in future. 
+createpwrshell() - Creates a Win32 console (Windows PowerShell) session, for running .ps1 scripts. 
+runbatch(filename) - runs a batch file.
+runps1 (filename) - runs a PowerShell script file.
+
