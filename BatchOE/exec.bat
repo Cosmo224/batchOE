@@ -12,13 +12,13 @@ REM BFCPEVERINCLUDE=1
 REM BFCPEVERVERSION=0.0.1.4
 REM BFCPEVERPRODUCT=EXEC v1.00.014
 REM BFCPEVERDESC=Textmode Shell for BatchOE (c) 2017
-REM BFCPEVERCOMPANY=Connor Hyde
-REM BFCPEVERCOPYRIGHT=(c) 2017 Connor Hyde.
+REM BFCPEVERCOMPANY=(c) 2017.
+REM BFCPEVERCOPYRIGHT=(c) 2017.
 REM BFCPEOPTIONEND
 @ECHO ON
 @echo off
 REM EXEC for Batch Operating Enviroment, v0.1.014.
-REM text based shell. (c)2017 Connor Hyde.
+REM text based shell. (c)2017.
 
 rem ChangeColor 4 0
 rem ShadeBoxAt 1 1 2 80 4
